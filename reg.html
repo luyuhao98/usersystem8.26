@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>注册用户</title>
+  <style type="text/css">
+    html{font-size:12px;}
+	fieldset{width:520px; margin: 0 auto;}
+	legend{font-weight:bold; font-size:14px;}
+	label{float:left; width:90px; margin-left:10px;}
+	.left{margin-left:80px;}
+	.input{width:150px;}
+	span{color: #666666;}
+  </style>
+
+ <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery
+/jquery-1.4.min.js"></script>
+
+<script src="reg.js" charset="utf-8"></script>
+<script src="ajax.js" charset="utf-8"></script>
+
+</head>
+<div>
+<fieldset>
+<legend>注册</legend>
+<form name="RegForm" method="post" action="reg.php" onSubmit="return InputCheck(this)">
+<p>
+<label for="invite" class="label">邀请码</label>
+<input id="invite" name="invite" type="text" class="input" onfocus="invt()" />
+<span id="itail"></span>
+<p/>
+<p>
+<label for="username" class="label">用户名</label>
+<input id="username" name="username" type="text" class="input" 用户名"  onfocus="userna(0,this.value)" onblur="userna(1,this.value)"/>
+<span id="utail">必填，3-15字符长度，支持汉字、字母、数字及_</span>
+<p/>
+<p>
+<label for="password" class="label">密码</label>
+<input id="password" name="password" type="password" class="input" onfocus="pass(0,this.value)" onblur="pass(1,this.value)" />
+<span id="ptail">密码6-15位分大小写</span>
+<p/>
+<p>
+<label for="repass" class="label">重复输入密码</label>
+<input id="repass" name="repass" type="password" class="input" onfocus="reepass(0,this.value)" onblur="reepass(1,this.value)" />
+<span id="rptail"></span>
+<p/>
+<p>
+<label for="email" class="label">邮箱</label>
+<input id="email" name="email" type="text" class="input" onblur="mail(this.value)" />
+<span id="mtail"></span>
+<p/>
+<p>
+<input type="submit" name="submit" value="提交" class="left" />
+</p>
+</form>
+</fieldset>
+</div>
+<body>
+</body>
+</html>
